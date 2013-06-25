@@ -1,0 +1,232 @@
+<HTML>
+	<HEAD>
+		<TITLE>AutotaskExtend</TITLE>
+		<SCRIPT LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
+		<!--
+			var Server='autotask.net';
+
+			function OpenWindowInAutotask(CommandCode,Params)
+			{
+				var URL='https://'+Server+'/autotask/AutotaskExtend/ExecuteCommand.aspx?Code='+CommandCode+'&'+Params;
+				window.open(URL,'_blank','toolbar=yes,width=800,height=600,scrollbars=yes,menubar=yes,status=yes,resizable=yes');
+
+			}
+
+			function OpenAccountWindowInAutotask(CommandCode)
+			{
+				var Phone=document.Form1.Phone.value;
+				if (Phone.length>0) {
+					OpenWindowInAutotask(CommandCode,'Phone='+Phone);
+				} else {
+					alert('Please provide an Account Phone Number.');
+				}
+			}
+
+			function OpenContactWindowInAutotask(CommandCode)
+			{
+				var EmailAddress=document.Form1.EmailAddress.value;
+				if (EmailAddress.length>0) {
+					OpenWindowInAutotask(CommandCode,'Email='+EmailAddress);
+				} else {
+					alert('Please provide a Contact E-Mail Address.');
+				}
+			}
+
+			function OpenTicketWindowInAutotask(CommandCode)
+			{
+				var TicketNumber=document.Form1.TicketNumber.value;
+				if (TicketNumber.length>0) {
+					OpenWindowInAutotask(CommandCode,'TicketNumber='+TicketNumber);
+				} else {
+					alert('Please provide a Ticket Number');
+				}
+			}
+
+			function NewAccountInAutotask()
+			{
+				OpenWindowInAutotask('NewAccount','');
+			}
+
+			function EditAccountInAutotask()
+			{
+				OpenAccountWindowInAutotask('EditAccount');
+			}
+
+			function OpenAccountInAutotask()
+			{
+				OpenAccountWindowInAutotask('OpenAccount');
+			}
+
+			function NewContactInAutotask()
+			{
+				OpenAccountWindowInAutotask('NewContact');
+			}
+
+			function NewInstalledProductInAutotask()
+			{
+				OpenAccountWindowInAutotask('NewInstalledProduct');
+			}
+
+			function NewTicketInAutotask()
+			{
+				OpenAccountWindowInAutotask('NewTicket');
+			}
+
+			function OpenContactInAutotask()
+			{
+				OpenContactWindowInAutotask('OpenContact');
+			}
+
+			function EditContactInAutotask()
+			{
+				OpenContactWindowInAutotask('EditContact');
+			}
+
+			function OpenTicketInAutotask()
+			{
+				OpenTicketWindowInAutotask('OpenTicketDetail');
+			}
+		-->
+		</SCRIPT>
+		<STYLE TYPE="text/css">
+		<!--
+			.heading {
+				font-family: Tahoma;
+				font-size: 12pt;
+				color: #FFFFFF;
+			}
+			.plainText {
+				font-family: Tahoma;
+				font-size: 9pt;
+				color: #003366;
+			}
+			.spacing {
+				font-size: 3pt;
+				background-color: #CCCCCC;
+			}
+			body {
+				margin-left: 0px;
+				margin-top: 0px;
+				margin-right: 0px;
+				margin-bottom: 0px;
+				background-color: #D4D4D4;
+			}
+		-->
+		</STYLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	</HEAD>
+	<BODY onLoad="document.Form1.Phone.focus();">
+		<FORM NAME="Form1">
+			<TABLE BORDER="0" width="100%" height="100%">
+				<TR>
+					<TD width="100%" height="100%" align="center" valign="middle">
+						<table width="950" height="583" border="0" cellpadding="0" cellspacing="0" bgcolor="#003366">
+							<tr>
+								<TD width="219" height="226" ALIGN="CENTER" valign="middle" bgcolor="#003366" class="heading">Autotask API</TD>
+								<TD width="781" ALIGN="left" valign="middle" bgcolor="#003366">
+									<TABLE width="731" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+										<TR>
+											<TD rowspan="3" align="center" valign="middle" bgcolor="#999999"><img src="handshake.gif" width="48" height="48"></TD>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD bgcolor="#CCCCCC">&nbsp;</TD>
+										        <TD bgcolor="#CCCCCC"><input type="BUTTON" class="plainText" onClick="NewAccountInAutotask();" value="New Account" style="width: 155px; height: 30px; "/></TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="3" bgcolor="#003366">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD width="104" rowspan="9" align="center" valign="middle" bgcolor="#999999"><img src="telephone.gif" width="48" height="48"></TD>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD width="191" ALIGN="RIGHT" bgcolor="#CCCCCC"><span class="plainText">Account Phone Number&nbsp;</span></TD>
+											<TD bgcolor="#CCCCCC"><INPUT TYPE="TEXT" NAME="Phone" SIZE="40" /></TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD bgcolor="#CCCCCC">&nbsp;</TD>
+										        <TD bgcolor="#CCCCCC">
+												<input type="BUTTON" class="plainText" onClick="OpenAccountInAutotask();" value="Open Account Details" style="width: 150px; height: 30px; "/>
+												<input type="BUTTON" class="plainText" onClick="EditAccountInAutotask();" value="Edit Account" style="width: 150px; height: 30px; "/></TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="2" bgcolor="#CCCCCC" CLASS="spacing">&nbsp;</TD>
+										</TR>
+										<TR>
+										  <TD bgcolor="#CCCCCC">&nbsp;</TD>
+										  <TD bgcolor="#CCCCCC"><input name="BUTTON" type="BUTTON" class="plainText" style="width: 150px; height: 30px; " onClick="NewTicketInAutotask();" value="New Ticket" />
+									      <input name="BUTTON2" type="BUTTON" class="plainText" style="width: 150px; height: 30px; " onClick="NewContactInAutotask();" value="New Contact"/></TD>
+									  </TR>
+										<TR>
+											<TD COLSPAN="2" bgcolor="#CCCCCC" CLASS="spacing">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD bgcolor="#CCCCCC">&nbsp;</TD>
+											<TD bgcolor="#CCCCCC">
+											<input type="BUTTON" class="plainText" onClick="NewInstalledProductInAutotask();" value="New Installed Product" style="width: 150px; height: 30px; "/></TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="3" bgcolor="#003366">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD rowspan="5" align="center" valign="middle" bgcolor="#999999"><img src="mail_earth.gif" width="48" height="48"></TD>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD ALIGN="RIGHT" bgcolor="#CCCCCC"><span class="plainText">Contact E-Mail Address&nbsp;</span></TD>
+											<TD bgcolor="#CCCCCC"><INPUT TYPE="TEXT" NAME="EmailAddress" SIZE="40" /></TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD bgcolor="#CCCCCC">&nbsp;</TD>
+											<TD bgcolor="#CCCCCC">
+												<input type="BUTTON" class="plainText" onClick="OpenContactInAutotask();" value="Open Contact Details" style="width: 150px; height: 30px; "/>
+												<input type="BUTTON" class="plainText" onClick="EditContactInAutotask();" value="Edit Contact" style="width: 150px; height: 30px; "/>											</TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="2" bgcolor="#003366">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD rowspan="5" align="center" valign="middle" bgcolor="#999999"><img src="debug_view.gif" width="48" height="48"></TD>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD ALIGN="RIGHT" bgcolor="#CCCCCC"><span class="plainText">Ticket Number&nbsp;</span></TD>
+											<TD bgcolor="#CCCCCC"><INPUT TYPE="TEXT" NAME="TicketNumber" SIZE="40" /></TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+										<TR>
+											<TD bgcolor="#CCCCCC">&nbsp;</TD>
+											<TD bgcolor="#CCCCCC">
+												<input type="BUTTON" class="plainText" onClick="OpenTicketInAutotask();" value="Open Ticket Details" style="width: 150px; height: 30px; "/>											</TD>
+										</TR>
+										<TR>
+											<TD COLSPAN="2" bgcolor="#CCCCCC">&nbsp;</TD>
+										</TR>
+									</TABLE>
+								</TD>
+							</TR>
+						</TABLE>
+					</TD>
+				</TR>
+			</TABLE>
+		</FORM>
+	</BODY>
+</HTML>
