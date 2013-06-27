@@ -13,6 +13,10 @@ echo 'how many tickets there' . $ticketno;
 function connectToAPI($username, $password){
         echo '<br>connecting to API<br>';
         $wsdl = 'https://webservices3.autotask.net/atservices/1.5/atws.wsdl';
+        
+        echo file_get_contents($wsdl);
+        die();
+
         $loginarray = array
             (
                 'login' => $username,
@@ -27,9 +31,9 @@ function connectToAPI($username, $password){
 
 
 function getTickets(){
-     $username = 'schenjobs@gmail.com';
-     $password = 'password';
-     $ticketno = '';
+     $username = 'gbaney@asmgi.com';
+     $password = 'stephenchen1';
+     $ticketno = 'T20130623.0113';
      $client = connectToAPI($username, $password);     
      $xml = array('sXml' => "<queryxml>" .
              "<entity>Ticket</entity>" .
